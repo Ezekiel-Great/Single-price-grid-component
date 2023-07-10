@@ -18,7 +18,7 @@ This is a solution to the [Single price grid component challenge on Frontend Men
 ### Screenshot
 ![Alt text](<images/Single-price-grid-component -desktop-view.png>)
 #### Desktop view
-![Alt text](<images/Single-price-grid-component-mobile-view.png>)
+![Alt text](<images\Single-Price-Grid-Component -mobile-view.png>)
 #### Mobile view
 
 ### Links

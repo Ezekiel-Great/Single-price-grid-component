@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+--Cyan: hsl(179, 62%, 43%);
+--Bright-Yellow: hsl(71, 73%, 54%);
+--Light-Gray: hsl(204, 43%, 93%);
+--Grayish-Blue: hsl(218, 22%, 67%);
+ 
+}
+
+/* For Mobile view(width=375px) */
+body{
+    background-color: var(--Light-Gray);
+    font-family: 'Karla', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+.container{
+    display: grid;
+    grid-template-areas: "header"
+    "month"
+    "footer"
+    ;
+    margin: 50px auto;
+    max-width: 90%;
+    border-radius: 8px;
+    color: white;
+    overflow: hidden;
+}
+
+ .content{
+    max-width: 90%;
+    margin: 24px auto;
+}   
+
+.container .join{
+    grid-area: header; 
+    background: white;
+  
+}
+.join .content{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.join h1{
+    color: var(--Cyan);
+}
+.join h2{
+    color: var(--Bright-Yellow);
+    font-size: 1.5rem;
+    font-weight: 400px;
+    line-height: 1.3;
+}
+.join p{
+    color: var(--Grayish-Blue);
+    font-size:16px ;
+    line-height: 1.75;
+}
+
+.container .monthly{
+    grid-area: month;
+    background: var(--Cyan);
+    color: var(--Light-Gray);
+}
+.monthly .content h3{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.content .money {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+.money h1{
+    font-size: 2.5rem;
+    color: white;
+    
+}
+.money p{
+    color:  hsla(204, 43%, 93%,0.4);
+    font-size: 1.2rem;
+}
+.content button{
+    width: 100%;
+    border-style: none;
+    background: var(--Bright-Yellow);
+    color: white;
+    font-size: 15px;
+    font-family: 'Karla', sans-serif;
+    height: 50px;
+    border-radius: 8px;
+    transition: width 2s,height 1s;
+}
+button:hover, button:active{
+    width: 80%;
+    height: 55px;
+    color:goldenrod;
+}
+.monthly .content>p{
+    font-size: 16px;
+    margin-bottom: 30px;
+    color:  hsla(204, 43%, 93%,0.75);
+}
+
+.container .why{
+    grid-area: footer;
+    background:  hsla(179, 62%, 43%,0.75);
+}
+.why p{
+    font-size: 16px;
+    margin-top: 30px;
+    color:   hsla(204, 43%, 93%,0.65);
+    width: 72.75%;
+    line-height: 1.5;
+    word-spacing: 2.5px;
+}
+
+/* desktop view(1440px) */
+@media(min-width:600px){
+    body{
+        height: 100vh;
+    }
+    .container{
+        max-width: 80%;
+        grid-template-areas:    "header header"
+            "month footer"  
+    ;
+        grid-template-columns: repeat(2,1fr);
+        max-width: 60%;
+        border-radius: 8px;
+        margin: 65px auto;
+    }
+     .monthly .content, .why .content{
+        max-width: 80%;
+    }  
+    .monthly .content>p{
+        margin-bottom: 60px;
+    }   
+            
+}
